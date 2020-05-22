@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <link rel="stylesheet" type="text/css" href="css/modal.css" />
+
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="site-container">
+    <!-- Head -->
+    <header>
+      <img src="imges\UCF LOGO.svg" alt="UCF logo" />
+    </header>
+    <!-- Main Heading -->
+    <div class="main-heading">
+      <p class="desktop-text">
+        Join the University of Central Toronto Cybersecurity Professional
+        Certificates Program
+      </p>
+      <p class="mobile-text">
+        Join the UCT Cybersecurity Professional Program
+      </p>
+    </div>
+        <!-- Subheading -->
+        <div class="subheading">
+          Become a Cybersecurity Professional! Study Cybersecurity at the
+          University of Central Toronto and launch your career as a Cyber
+          Professional.
+        </div>
+                <!-- info -->
+    <div class="info">
+      <ul>
+        <li>
+          <img src="imges\v.svg" alt="v" class="img-v" />12 Courses in 1
+          Program
+        </li>
+        <li>
+          <img src="imges\v.svg" alt="v" class="img-v" />No Prior Experience
+          Necessary
+        </li>
+        <li>
+          <img src="imges\v.svg" alt="v" class="img-v" />Hands-On Training
+        </li>
+        <li>
+          <img src="imges\v.svg" alt="v" class="img-v" />Flexible WKND/Eve
+          Classes
+        </li>
+      </ul>
+    </div>
+    <!-- Call to action -->
+    <div class="call-to-action">
+      <button onclick="openModal()" class="box-button">
+        <span>GET YOUR</span>
+        <span>FREE</span>
+        <span>CONSULTATION TODAY</span>
+      </button>
+      <div id="modal-wrapper" class="modal">
+        <form class="modal-content animate" id="contact-form" action="#">
+          <span class="close" id="close-form" title="Close PopUp">&times;</span>
+          <h1>
+            Fill Out The Form Below <br />
+            for a FREE Consultation
+          </h1>
+
+          <div class="container">
+            <label for="name">Full Name</label>
+            <input type="text" name="name" id="name" />
+            <p></p>
+            <label for="phone">Phone</label>
+            <input type="phone" name="phone" id="phone" />
+            <p></p>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" />
+            <p></p>
+            <input class="submit-btn" type="submit" value="CHECK AVAILABLE DATA & TIME">
+            <p></p>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- Reminders -->
+    <div class="reminders">
+      <span class="p7">Registration Ends Soon.</span>
+      <span class="p7">Save your spot.</span>
+    </div>
+    <!-- Footer -->
+    <footer>
+      <img class="arrow-img" src="./imges/arrow.svg" alt="" />
+
+      <div class="copyrights">Copyright &copy; 2020 by UCT</div>
+      <a class="privacy-link" href="#">Privacy Policy</a>
+    </footer>
+  </div>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/validation.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,347 @@
+/* ----------------- Typography ---------------- */
+@font-face {
+  font-family: RobotoSlab-Bold;
+  src: url(../fonts/RobotoSlab-Bold.ttf);
+}
+
+@font-face {
+  font-family: Roboto-Regular;
+  src: url(../fonts/Roboto-Regular.ttf);
+}
+
+@font-face {
+  font-family: Roboto-Bold;
+  src: url(../fonts/Roboto-Bold.ttf);
+}
+
+@font-face {
+  font-family: Roboto-Light;
+  src: url(../fonts/RobotoSlab-Light.ttf);
+}
+
+/*------------ Base ------------*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  font-size: 1.1rem;
+  font-family: Roboto-Bold;
+}
+
+
+
+/* ----------------- Main Layout ---------------- */
+
+.site-container {
+  background-image: url("../imges/desktop-bg2.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 65% 12%;
+  background-size: cover;
+  display: grid;
+  grid-template-rows: .4fr .9fr .9fr 1.5fr .9fr 2.5fr;
+  grid-template-columns: 1fr 5fr 3fr;
+  grid-template-areas:
+    ". header . ."
+    ". main-heading . ."
+    ". subheading . ."
+    ". info . ."
+    ". reminders . ."
+    "footer footer footer footer";
+  grid-gap: 5px;
+}
+
+header {
+  grid-area: header;
+  margin: 15px;
+  justify-self: start;
+}
+
+.main-heading {
+  grid-area: main-heading;
+  font-family: RobotoSlab-Bold;
+  font-size: 3.33rem;
+  padding: 5px;
+}
+
+.info {
+  grid-area: info;
+}
+
+.call-to-action {
+  grid-row: 4/5;
+  grid-column: 2/3;
+  height: 60%;
+  width: 35%;
+  justify-self: end;
+}
+
+.subheading {
+  grid-area: subheading;
+  font-family: Roboto-Regular;
+  font-size: 2rem;
+  margin: 5px 0 20px 0;
+}
+
+.reminders {
+  grid-area: reminders;
+
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+footer {
+  grid-area: footer;
+  height: 33%;
+  justify-self: center;
+  align-self: start;
+  text-align: center;
+}
+
+/*------------ Call To Action ------------*/
+
+.box-button {
+  border-radius: 10px;
+  line-height: .9;
+  width: 230px;
+}
+
+.box-button>span:first-child {
+  font-size: 2.3rem;
+}
+
+.box-button>span:nth-child(2) {
+  font-size: 5rem;
+}
+
+.box-button>span:nth-child(3) {
+  font-size: 1.05rem;
+}
+
+/*------------ Reminders ------------*/
+
+.reminders>span:first-child {
+  background-color: #000;
+  font-family: Roboto-Light;
+  color: #fff;
+  font-size: 20pt;
+}
+
+.reminders>span:last-child {
+  background-color: #ffca06;
+  font-family: Roboto-Light;
+  color: #000;
+  font-size: 34pt;
+}
+
+
+/*------------ Footer ------------*/
+
+
+.credits {
+  display: flex;
+  align-items: center;
+}
+
+.credits>span:nth-child(2) {
+  margin: 0 15px;
+  font-family: Roboto-Regular;
+
+}
+
+.ucf-logo-small {
+  width: 30px;
+}
+
+.hackeru-logo-small {
+  width: 70px;
+  height: 22px;
+  background-image: url(../imges/hackeru-bk.svg);
+  background-repeat: no-repeat;
+}
+
+.copyrights {
+  font-family: Roboto-Regular;
+  margin: 10px 0;
+}
+
+.privacy-link {
+  color: #ffca06;
+  font-family: Roboto-Regular;
+  padding-top: 6px;
+}
+
+/* ------------ Helpers ------------- */
+
+.desktop-text {
+  display: block;
+}
+
+.mobile-text {
+  display: none;
+}
+
+.p7 {
+  padding: 7px;
+}
+
+header>img {
+  width: 100%;
+}
+
+.img-v {
+  width: 3.5rem;
+  vertical-align: middle;
+  padding: 0 15px 7px 0;
+}
+
+/*------------ Breakpoints ------------*/
+
+
+@media screen and (max-width: 1700px) {
+  .main-heading {
+    font-size: 2.5rem;
+  }
+}
+
+
+
+@media screen and (max-width: 1370px) {
+  .main-heading {
+    font-size: 2rem;
+  }
+
+  .subheading {
+    font-size: 1.7rem;
+  }
+
+  .box-button {
+    border-radius: 10px;
+    line-height: .9;
+    width: 170px;
+  }
+  
+  .box-button>span:first-child {
+    font-size: 1.6rem;
+  }
+  
+  .box-button>span:nth-child(2) {
+    font-size: 3.5rem;
+  }
+  
+  .box-button>span:nth-child(3) {
+    font-size: .7rem;
+  }
+}
+
+@media screen and (max-width: 1025px) {
+  .site-container {
+    /* height: 100vh; */
+    background-position: 76% 12%;
+  }
+
+  .main-heading {
+    font-size: 1.7rem;
+  }
+
+  .subheading {
+    font-size: 1.5rem;
+  }
+
+}
+
+@media screen and (max-width: 850px) {
+  .call-to-action {
+    grid-column: 3/4;
+    justify-self: start;
+  }
+}
+
+@media screen and (max-width: 700px) {
+
+  .site-container {
+    background-image: url("../imges/mobile-bg.png");
+    display: grid;
+    height: unset;
+    background-position: bottom;
+    background-attachment: unset;
+    grid-template-rows: repeat(auto, 1fr);
+    grid-template-areas:
+      "header header header header"
+      "main-heading main-heading main-heading main-heading"
+      "subheading subheading subheading subheading"
+      "info info info info"
+      "reminders reminders reminders reminders"
+      "cta cta cta cta"
+      "cta cta cta cta"
+      "footer footer footer footer";
+    ;
+  }
+
+  .main-heading {
+    text-align: center;
+    /* width: 70%; */
+  }
+
+  .subheading {
+    /* width: 60%; */
+    font-size: 1.3rem;
+    text-align: center;
+  }
+
+  .desktop-text {
+    display: none;
+  }
+
+  .mobile-text {
+    display: block;
+  }
+
+  .call-to-action {
+    grid-area: cta;
+    justify-self: start;
+  }
+
+  .info {
+    margin-left: 15px;
+  }
+
+  .reminders {
+    margin-left: 15px;
+  }
+
+  .reminders>span:first-child {
+    font-size: 1rem;
+  }
+
+  .reminders>span:last-child {
+    font-size: 2rem;
+  }
+
+  .arrow-img {
+    display: none;
+  }
+
+  .hackeru-logo-small {
+    width: 70px;
+    height: 22px;
+    background-image: url(../imges/hackeru-wt.svg);
+    background-repeat: no-repeat;
+  }
+  footer{
+    color: white;
+  }
+  .privacy-link {
+    color:white;
+  }
+}
